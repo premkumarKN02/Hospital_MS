@@ -1,0 +1,25 @@
+name: doctor_mobile_tracker
+description: "Free Real-Time Doctor Geolocation Mobile Tracking App for Hospital Management System"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  geolocator: ^13.0.2
+  flutter_foreground_task: ^8.18.0
+  battery_plus: ^6.2.1
+  http: ^1.2.2
+  shared_preferences: ^2.3.3
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

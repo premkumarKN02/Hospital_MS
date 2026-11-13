@@ -1,0 +1,136 @@
+:root {
+  /* ==========================================================================
+     1. BRAND PRIMITIVE & SEMANTIC (Default Primary: #2563EB Blue)
+     Change --primary-hue and --primary-sat to rebrand the entire application in 1 second!
+     ========================================================================== */
+  --primary-h: 221;
+  --primary-s: 83%;
+  --primary-l: 53%; /* #2563EB */
+
+  /* Base HSL Channels for Tailwind / Utilities */
+  --background: 210 40% 98%;          /* #F8FAFC (Slate 50) */
+  --foreground: 222 47% 11%;          /* #0F172A (Slate 900) */
+
+  --card: 0 0% 100%;                  /* #FFFFFF */
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+  --primary-foreground: 210 40% 98%;  /* #FFFFFF */
+
+  --secondary: 210 40% 96%;           /* #F1F5F9 (Slate 100) */
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;    /* #64748B (Slate 500) */
+
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+
+  --destructive: 0 84% 60%;           /* #DC2626 (Red 600) */
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214 32% 91%;              /* #E2E8F0 (Slate 200) */
+  --input: 214 32% 91%;
+  --ring: var(--primary-h) var(--primary-s) var(--primary-l);
+
+  /* Radius scale (4px base) */
+  --radius: 0.5rem;                   /* 8px base default */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Semantic Status Colors (WCAG AA Compliant) */
+  --color-success-base: #16A34A;     /* Green 600 */
+  --color-success-subtle: #F0FDF4;   /* Green 50 */
+  --color-success-foreground: #166534;/* Green 800 */
+  --color-success-border: #BBF7D0;
+
+  --color-warning-base: #D97706;     /* Amber 600 */
+  --color-warning-subtle: #FFFBEB;   /* Amber 50 */
+  --color-warning-foreground: #92400E;/* Amber 800 */
+  --color-warning-border: #FDE68A;
+
+  --color-danger-base: #DC2626;      /* Red 600 */
+  --color-danger-subtle: #FEF2F2;    /* Red 50 */
+  --color-danger-foreground: #991B1B;/* Red 800 */
+  --color-danger-border: #FECACA;
+
+  --color-info-base: #0284C7;        /* Sky 600 */
+  --color-info-subtle: #F0F9FF;      /* Sky 50 */
+  --color-info-foreground: #075985;  /* Sky 800 */
+  --color-info-border: #BAE6FD;
+
+  /* Typography Scale */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+
+  /* Z-Index Hierarchy */
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-header: 1200;
+  --z-sidebar: 1300;
+  --z-backdrop: 1400;
+  --z-modal: 1500;
+  --z-popover: 1600;
+  --z-toast: 1700;
+  --z-tooltip: 1800;
+}
+
+/* ==========================================================================
+   DARK THEME TOKENS
+   ========================================================================== */
+[data-theme="dark"], .dark {
+  --background: 222 47% 5%;           /* #020617 (Slate 950) */
+  --foreground: 210 40% 98%;          /* #F8FAFC (Slate 50) */
+
+  --card: 222 47% 10%;                /* #0F172A (Slate 900) */
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 10%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Dark mode shifts primary slightly brighter for contrast */
+  --primary: 217 91% 60%;             /* #3B82F6 (Blue 500) */
+  --primary-foreground: 222 47% 11%;
+
+  --secondary: 217 33% 17%;           /* #1E293B (Slate 800) */
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;    /* #94A3B8 (Slate 400) */
+
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 63% 45%;           /* #B91C1C */
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 217 91% 60%;
+
+  /* Dark Semantic Status Colors */
+  --color-success-base: #22C55E;
+  --color-success-subtle: rgba(34, 197, 94, 0.15);
+  --color-success-foreground: #86EFAC;
+  --color-success-border: rgba(34, 197, 94, 0.25);
+
+  --color-warning-base: #F59E0B;
+  --color-warning-subtle: rgba(245, 158, 11, 0.15);
+  --color-warning-foreground: #FCD34D;
+  --color-warning-border: rgba(245, 158, 11, 0.25);
+
+  --color-danger-base: #EF4444;
+  --color-danger-subtle: rgba(239, 68, 68, 0.15);
+  --color-danger-foreground: #FCA5A5;
+  --color-danger-border: rgba(239, 68, 68, 0.25);
+
+  --color-info-base: #38BDF8;
+  --color-info-subtle: rgba(56, 189, 248, 0.15);
+  --color-info-foreground: #7DD3FC;
+  --color-info-border: rgba(56, 189, 248, 0.25);
+}

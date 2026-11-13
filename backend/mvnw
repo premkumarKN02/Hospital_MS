@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+PRG="$0"
+while [ -h "$PRG" ] ; do
+  PRG="$(readlink "$PRG")"
+done
+DIR="$(cd "$(dirname "$PRG")" && pwd)"
+exec "$DIR/maven/apache-maven-3.9.6/bin/mvn" "$@"
